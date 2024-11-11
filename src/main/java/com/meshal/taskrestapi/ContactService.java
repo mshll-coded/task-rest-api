@@ -19,6 +19,15 @@ public class ContactService {
         return null;
     }
 
+    public Contact getContactByEmail(String email) {
+        for (Contact contact : contacts) {
+            if (contact.getEmail().equals(email)) {
+                return contact;
+            }
+        }
+        return null;
+    }
+
     public void addContact(Contact contact) {
         contacts.add(contact);
     }
